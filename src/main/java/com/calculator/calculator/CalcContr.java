@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalcContr {
-    @GetMapping
+    @GetMapping(path = "/calculator")
     public String wellcome(){
         return "Добро пожаловать";
     }
