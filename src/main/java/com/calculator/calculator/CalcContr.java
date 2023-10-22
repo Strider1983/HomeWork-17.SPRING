@@ -6,14 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalcContr {
-    @GetMapping(path = "/calculator")
-    public String wellcome(){
-        return "Добро пожаловать";
+    private final CalcOpers calculation;
+    public CalcContr(CalcOpers calculation) {
+        this.calculation = calculation;
     }
-    public int num1;
-    public int num2;
-    @GetMapping(path = "/calculator/plus")
-    public int plus(int num1, int num2) {
-         return num1+num2;
+    @GetMapping(path = "/calculator")
+    public String wellcome() {
+        return calculation.wellcome();
     }
 }
