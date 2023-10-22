@@ -6,7 +6,7 @@ public class Calculations implements CalcOpers {
 
     @Override
     public String wellcome() {
-        return wellcome();
+        return "Добро пожаловать в калькулятор";
     }
 
     @Override
